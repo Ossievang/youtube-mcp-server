@@ -22,7 +22,6 @@ COPY package*.json ./
 RUN npm install && npm cache clean --force
 
 COPY --from=build /app/dist ./dist
-COPY --from=build /app/.env ./.env
 
 EXPOSE 8088
 
